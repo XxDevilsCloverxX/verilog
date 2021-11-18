@@ -1,0 +1,29 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x558d2079cdf0 .scope module, "demo" "demo" 2 1;
+ .timescale 0 0;
+v0x558d207aff70_0 .var "my_reg_1bit", 0 0;
+v0x558d2079e830_0 .var "my_reg_4bit", 3 0;
+    .scope S_0x558d2079cdf0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x558d207aff70_0, 0, 1;
+    %vpi_call 2 6 "$display", "my_reg_1bit = %d", v0x558d207aff70_0 {0 0 0};
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x558d2079e830_0, 0, 4;
+    %vpi_call 2 8 "$display", "my_reg_4bit = %d", v0x558d2079e830_0 {0 0 0};
+    %vpi_call 2 9 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "SRVerilog.v";
